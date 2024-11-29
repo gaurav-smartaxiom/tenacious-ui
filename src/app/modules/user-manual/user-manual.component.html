@@ -1,0 +1,548 @@
+<header class="bg-primary fixed-top d-flex justify-content-start p-3">
+    <h3 class="text-center font-weight-bold text-light p-0 m-0">User Manual</h3>
+  </header>
+  <div class="container-fluid accordion-manual">
+    <div class="row m-0 mt-5 pt-5">
+      <div class="col p-0">
+        <p-accordion [activeIndex]="0">
+          <p-accordionTab header="Dashboard">
+            <div class="row">
+              <div class="col-md-8">
+                <img src="images/manual/dashboard.png" class="w-100" alt="Dashboard" />
+              </div>
+              <div class="card col-md-4 mb-0 border-0">
+                <p>
+                  The dashboard is a central hub that provides a comprehensive summary of various metrics related to
+                  your
+                  shipments and
+                  trackers. Here's a quick overview of what you can expect to find:
+                </p>
+                <ul class="list-group list-group-numbered border-0 mb-3">
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div class="text-bold">1. IMPACT trackers:</div> This widget displays the number of active and
+                      inactive
+                      trackers currently in use.
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div class="text-bold">2. Total Shipments:</div> This widget summarizes the number of shipments in
+                      your
+                      organization, and also provides a breakdown of counts by shipment type.
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div class="text-bold">3. Alerts:</div> This widget showcases alerts related to trackers' battery,
+                      temperature and
+                      humidity ranges, allowing you to take proactive steps to protect your shipments.
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="ms-2 me-auto">
+                      <div class="text-bold">Shipments:</div> This list provides a detailed view of all the shipments
+                      which have data in last 24 hours,
+                      including their current status. Clicking on "Show All"<br>
+                      displays the last location of all your shipments, while clicking on the shipment name displays
+                      its
+                      route and location on
+                      the map.
+                    </div>
+                    <div class="ml-4">
+                      <b>4. Filter:</b> The filter option can be used to find or filter shipments based on Shipment
+                      Name.<br>
+                      <b>5. Shipment Data:</b> A user can check any shipment's route and details by locationg the shipment
+                      name in this list.<br>
+                      <b>6. Show Route:</b> The button facilitates user to check the route covered by a particular
+                      shipment.<br>
+                      <b>7. Show Deatils:</b> The button helps user to go through the complete details of any
+                      shipment.<br>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div class="text-bold">8. Map:</div> It provides a visual representation of the location and route
+                      of your
+                      shipments, helping you keep track of their progress in real-time.
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div class="text-bold">9. Event Log:</div> This table shows all the event details related to your
+                      shipments, providing you with a detailed record of their journey.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </p-accordionTab>
+          <p-accordionTab header="Tracker Management">
+            <div id="tracker" class="row mb-5">
+              <div class="col-md-8">
+                <img src="images/manual/tracker_management.png" class="w-100" alt="tracker-image" />
+              </div>
+              <div class="card col-md-4 mb-0 border-0">
+                <p>
+                  Tracker management is a crucial aspect of monitoring and maintaining the performance of your
+                  tracking
+                  devices. Here is a
+                  summary of the key features and actions available in the tracker management module:
+                </p>
+                <ul class="list-group list-group-numbered border-0 mb-3">
+                  <li class="list-group-item">
+                    <div class="ms-2 me-auto">
+                      <div id="discover-tracker" class="text-bold">Discover Tracker:</div> To discover a tracker,
+                      simply
+                      navigate to the "Tracker Management" section from the navigation bar. Here you will find a
+                      table that provides detailed information about each tracker, including its UUID, serial
+                      number,
+                      shipment name (if
+                      assigned), battery status, activation status, calibration certificate, and version
+                      information.
+                    </div>
+                    <div>
+                      <b>1. Filter:</b> The filters facilitate a user to filter trackers based on UUID, serail number,
+                      shipment name, battery level, status and last connected.<br>
+                      <b>2. Widgets:</b> The widgets provide a complete overview of the counts of trackers based on
+                      connectivity status. It also includes a progress bar.<br>
+                      <b>3. Callibration Certificate:</b> User can download Callibration certificate of any tracker from
+                      here.<br>
+                      <b>4. More Info:</b> By clicking on this button, a user can fetch version details of each
+                      tracker.<br>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="m-4 mb-0 border-0 d-flex justify-content-between">
+                <div class="col-md-3">
+                  <div id="activate-tracker" class="text-bold">Activate Tracker</div> To activate a tracker, go
+                  to the
+                  "Shipments" section from the navigation bar and <a class="blue-font" href="javascript.void(1)"><u>Create
+                      a new Shipment</u></a>.<br> You can then
+                  assign the tracker to the shipment to begin monitoring its data.
+                </div>
+                <div class="col-md-3">
+                  <div id="update-tracker" class="text-bold">Update Tracker Configuration</div> If you need to
+                  update the
+                  configuration of a tracker, you can do so by updating the shipment associated with that
+                  tracker.<br>
+                  Simply navigate to the "Shipments" section and <a class="blue-font" href="javascript.void(1)"><u>Update
+                      Shipment</u></a> to reflect the new configuration.
+                </div>
+                <div class="col-md-3">
+                  <div id="deactivate-tracker" class="text-bold">Deactivate Tracker</div> To deactivate a
+                  tracker,
+                  navigate to the "Shipments" section, <a class="blue-font" href="javascript.void(1)"><u>Update
+                      Shipment</u></a> and unassign the tracker from the shipment. This will
+                  automatically deactivate the tracker.
+                </div>
+              </div>
+            </div>
+          </p-accordionTab>
+          <p-accordionTab header="User Management">
+            <div id="user" class="row">
+              <div class="col-md-8">
+                <img src="images/manual/user-management.png" class="w-100" alt="user-image" />
+              </div>
+              <div class="col-md-4">
+                <p>
+                  User management is an essential aspect of maintaining control and access within your
+                  organization's
+                  system. Here is a
+                  summary of the key features and actions available in the user management module:
+                </p>
+                <ul class="list-group list-group-numbered border-0 mb-3">
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div id="activate-tracker">Create User</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div id="update-tracker">Update User</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div id="update-tracker">User Session History</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto"><div id="deactivate-tracker">Delete User</div></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 mt-3">
+                <div class="row mt-3 w-75 m-auto">
+                  <h5 class="text-center col-12">Steps to add or update shipment</h5>
+                  <div class="col-2">
+                    <div class="nav flex-column nav-pills" id="nav-tab" role="tablist" aria-orientation="vertical">
+                      <button class="nav-link active" id="create" data-toggle="pill" data-target="#create-user"
+                        type="button" role="tab" aria-controls="create-user" aria-selected="true">Create User</button>
+                      <button class="nav-link" id="update" data-toggle="pill" data-target="#update-user" type="button"
+                        role="tab" aria-controls="update-user" aria-selected="false">Update User</button>
+                      <button class="nav-link" id="delete" data-toggle="pill" data-target="#delete-user" type="button"
+                        role="tab" aria-controls="delete-user" aria-selected="false">Delete User</button>
+                      <!-- <button class="nav-link" id="policy" data-toggle="pill" data-target="#access-policies" type="button"
+                        role="tab" aria-controls="access-policies" aria-selected="false">Access Policy</button> -->
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="tab-content p-3 border-left">
+                      <div class="tab-pane fade active show" id="create-user" role="tabpanel" aria-labelledby="create">
+                        <div class="row">
+                          <div class="col-8">
+                            <p class="card-text">To create a new user, simply click on the 'Add user' icon located
+                              on
+                              the top
+                              bar. This will
+                              redirect you to the 'Add New User' form where you can fill in the necessary details.
+                              <br />
+  
+                              Once you have completed the form, click on 'Create
+                              Account' to
+                              register the new user in your organization.<br>
+                              If you wish to assign shipments to the user immediately, you can do so during this
+                              process.
+                              Alternatively,
+                              you can assign shipments to the user at a later time.
+                            </p>
+  
+                          </div>
+                          <div class="col-4"><!-- <img src="images/manual/add-user-icon.png" class="card-img-top"
+                            >
+                            <br /> --><img src="images/manual/add-user-form.png" class="card-img-top">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="delete-user" role="tabpanel" aria-labelledby="delete">
+                        <div class="row">
+                          <div class="col-8">
+                            If you need to delete a user, simply
+                            navigate to
+                            the
+                            "User Management" page. From here, you can delete the user by clicking on the "Delete" icon
+                            located
+                            beside the
+                            user's data in the Actions column.
+                          </div>
+                          <div class="col-4"><img src="images/manual/delete-user.png" class="card-img-top"
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="update-user" role="tabpanel" aria-labelledby="update">
+                        <div class="row">
+                          <div class="col-8">
+                            To edit any user's data, simply navigate to the "User
+                            Management" section under "Access Control". This will
+                            take you to a page that contains a table with a list of all users and their basic
+                            details.<br>
+                            From the Action column, click on the "Edit" icon to access the user's details. Here, you
+                            can edit
+                            various
+                            information
+                            about the user, including their username, address, and contact number.
+                            <br/>
+                            User can also enable or disable email alerts and daily reports for the
+                            user.
+                            User can manage the user's role. If the assigned role is "User", you can assign or unassign
+                            shipments to the user.<br>
+                            Once you have made the necessary changes, click on "Update" to update the user's data.
+                          </div>
+                          <div class="col-4"><img src="images/manual/edit-user-info.png" class="card-img-top"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-accordionTab>
+          <p-accordionTab header="Shipment Management">
+            <div id="shipment" class="row">
+  
+              <div class="col-md-8">
+                <img src="images/manual/shipments.png" class="w-100" alt="user-image" />
+              </div>
+              <div class="col-md-4">
+                <p>
+                  From the navigation bar, select "Shipments", you will be directed to Shipments page. <br>
+                  The page consists of a table which gives a brief overview of the all the shipments.
+                  You can click on any of the shipment to view its complete report.
+                </p>
+                <ul class="list-group list-group-numbered border-0 mb-3">
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div id="activate-tracker" class="text-bold">1. Create Shipment:</div>
+                      To create a new shipment, you have two options:
+                      <ol>
+                        <li>
+                          From the Dashboard:
+                          <ul>
+                            <li>
+                              Click on the 'Add' icon located in the 'Total Shipments' widget on the dashboard.
+                            </li>
+                            <li>
+                              This will take you to the shipment creation process.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          From the Navigation Bar:
+                          <ul>
+                            <li>
+                              Select 'Shipments' from the navigation bar.
+                            </li>
+                            <li>
+                              Click on the 'Add New Shipment' button.
+                            </li>
+                            <li>
+                              This will start the shipment creation process.
+                            </li>
+                          </ul>
+                        </li>
+                      </ol>
+                      <p>
+                        The shipment creation process consists of four steps which are mentioned below.<br>
+                      </p>
+                    </div>
+                  </li>
+                    <li class="list-group-item d-flex">
+                      <div class="ms-2 me-auto">
+                        <b>2. Refresh:</b> By clicking on this button, user can fetch latest shipments' data.
+                        <b>3. Search:</b> Search option facilitates user to search a shipment by its name, type or tracker id.
+                        <b>4. Delete Shipment:</b> A user can delete a shipment using this icon.
+                      </div>
+                    </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div id="update-tracker" class="text-bold">5. Update Shipment:</div>
+                      <ol>
+                        <li>Navigate to the "Shipments" page from the navigation bar.</li>
+                        <li>On the Shipments page, use the search options available at the top of the table to find
+                          the
+                          specific shipment
+                          you
+                          need
+                          to update.</li>
+                        <li>Once you've located the shipment, look for the corresponding 'Edit' icon in the Actions
+                          column
+                          and click on
+                          it.
+                        </li>
+                        <li>You will be presented with an update modal that consists of four sections similar to add
+                          shipment.</li>
+                      </ol>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row mt-3 w-75 m-auto">
+              <h5 class="col-12 text-center">Steps to add or update shipments.</h5>
+              <div class="col-2">
+                <div class="nav flex-column nav-pills" id="nav-tab" role="tablist" aria-orientation="vertical">
+                  <button class="nav-link active" id="step-1" data-toggle="tab" data-target="#shipment-details"
+                    type="button" role="tab" aria-controls="shipment-details" aria-selected="true">Step 1</button>
+                  <button class="nav-link" id="step-2" data-toggle="tab" data-target="#gateway-mapping" type="button"
+                    role="tab" aria-controls="gateway-mapping" aria-selected="false">Step 2</button>
+                  <button class="nav-link" id="step-3" data-toggle="tab" data-target="#blutag-mapping" type="button"
+                    role="tab" aria-controls="blutag-mapping" aria-selected="false">Step 3</button>
+                  <button class="nav-link" id="step-4" data-toggle="tab" data-target="#status" type="button" role="tab"
+                    aria-controls="status" aria-selected="false">Step 4</button>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="tab-content p-3 border-left">
+                  <div class="tab-pane fade active show" id="shipment-details" role="tabpanel" aria-labelledby="step-1">
+                    <div class="row">
+                      <div class="col-8">
+                        <b>Shipment Details</b><br>
+                        In this step, you need to provide the basic information about the shipment, including:
+                        <ul>
+                          <li>Shipment name</li>
+                          <li>Shipment type</li>
+                          <li>Pickup and delivery details</li>
+                          <li>Geofence (if required)</li>
+                        </ul>
+                      </div>
+                      <div class="col-4"><img src="images/manual/add-shipment-1.png" class="w-100"
+                          alt="user-image" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="gateway-mapping" role="tabpanel" aria-labelledby="step-2">
+                    <div class="row">
+                      <div class="col-8">
+                        <b>Gateway Mapping</b><br>
+                        In this step, you can assign a tracker to the shipment from the available options. To do
+                        this:
+                        <ol>
+                          <li>Select a tracker from the list of available trackers.</li>
+                          <li>An accordion tab will open up where you can configure temperature, humidity settings,
+                            and the frequency of
+                            receiving
+                            events.</li>
+                          <li>Once you have filled in the details, click on 'Save' to send an activation request to
+                            the tracker.</li>
+                        </ol>
+                      </div>
+                      <div class="col-4"><img src="images/manual/add-shipment-2.png" class="w-100"
+                          alt="user-image" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="blutag-mapping" role="tabpanel" aria-labelledby="step-3">
+                    <div class="row">
+                      <div class="col-8">
+                        <b>Blutag Mapping</b><br>
+                        If you want to fetch data from a blutag, you can attach blutags from the list of available
+                        tags. The data from the
+                        blutags will be appended to the tracker data and pushed to the system.
+                      </div>
+                      <div class="col-4"><img src="images/manual/add-shipment-3.png" class="w-100"
+                          alt="user-image" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="status" role="tabpanel" aria-labelledby="step-4">
+                    <div class="row">
+                      <div class="col-8">
+                        <b>Status</b><br>
+                        A shipment can have one of the following statuses:
+                        <ul>
+                          <li><u>Started</u>: Indicates that the shipment is currently in transit, and data
+                            recording
+                            is active.</li>
+                          <li><u>Paused</u>: Indicates that the shipment is paused, and data recording is not
+                            required.</li>
+                          <li><u>Completed</u>: Indicates that the shipment has reached its destination, and data
+                            recording is no longer needed.
+                            The
+                            tracker will be unassigned and deactivated when the shipment is completed.</li>
+                          <li><u>Cancelled</u>: Indicates that the shipment has been cancelled, and data recording
+                            is
+                            not necessary.</li>
+                        </ul>
+                      </div>
+                      <div class="col-4"><img src="images/manual/add-shipment-4.png" class="w-100"
+                          alt="user-image" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-accordionTab>
+          <p-accordionTab header="Monitor Shipment">
+            <div id="monitor-shipment" class="row">
+              <div class="col-md-8">
+                <img src="images/manual/shipment-report.png" class="w-100" alt="user-image" />
+              </div>
+              <div class="col-md-4">
+                To monitor a shipment, you can follow these steps:
+                <ul class="list-group list-group-numbered border-0 mb-3">
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div id="deactivate-tracker" class="text-bold">On the Dashboard:</div>
+                      <ul>
+                        <li>
+                          Click on the shipment's name from the 'Shipment List' on the left-hand side.<br>
+                        </li>
+                        <li>
+                          You can click on 'Show Details' to view all the specific details of the shipment.<br>
+                        </li>
+                        <li>
+                          The route of the shipment will be displayed on the map, giving you a visual representation
+                          of its
+                          progress.<br>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                      <div id="deactivate-tracker" class="text-bold">Navigate to the Shipments page:</div>
+                      <ul>
+                        <li>
+                          Locate and click on the specific shipment you wish to monitor.
+                        </li>
+                        <li>
+                          You will be taken to the shipment's report page.
+                        </li>
+                        <li>
+                          The report page provides comprehensive information about the shipment.
+                        </li>
+                        <li>
+                          At the top, you will see the shipment's name, type, assigned tracker, tracker's battery
+                          percentage, signal
+                          strength, and
+                          the total recorded events.
+                        </li>
+                        <li>
+                          Below this, you will find options to view the calibration certificate and download the
+                          report.
+                        </li>
+                        <li>
+                          The page also displays the basic details and current data of the shipment.
+                        </li>
+                        <li>
+                          A map is provided to show the complete route taken by the shipment.
+                        </li>
+                        <li>
+                          Following the map, you will find alerts and a summary of the shipment.
+                        </li>
+                        <li>
+                          Graphs for temperature and humidity are included, presenting the minimum, maximum,
+                          average, and
+                          mean values.
+                        </li>
+                        <li>
+                          If any blutag is assigned, a separate graph for blutag temperature will be reported.
+                        </li>
+                        <li>
+                          Finally, a table is presented that includes all the recorded events for the shipment.
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </p-accordionTab>
+          <p-accordionTab header="Reports">
+            <div id="report" class="row">
+              <div class="ml-4">
+                <b>Daily Report</b> <br> The Superadmin, Admins and all users for whom daily reports have been enabled, will receive a report everday 9 A.M. which consists of all the events occured in last 24 hours.<br>
+                <b>Download/Email Report</b>
+                <div class="d-flex">
+                  <div class="col-md-2">
+  
+                  </div>
+                  <div class="col-4">
+                    <img src="images/manual/daily_report.png" class="w-100" alt="user-image" />
+                  </div>
+                  <div class="col-md-1">
+  
+                  </div>
+                  <div class="card col-3">
+                    Users can also Download/Email the report whenever they wish to.
+                    From the Top Bar, click on the PDF icon, from the popup choose Download/Email option.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-accordionTab>
+        </p-accordion>
+      </div>
+    </div>
+  </div>
+  <footer class="p-2 small clearfix vertical-align-bottom">
+    <div class="d-flex justify-content-between">
+      <p class="mb-0">Copyright &copy; {{copyrightYear}} <a class="text-poweredby"
+          href="javascript:void(0)">SmartAxiom</a>. All rights reserved.</p>
+      <p class="mb-0"><i>Powered by </i><b><a class="text-poweredby" href="javascript:void(0)"> SmartAxiom</a></b></p>
+    </div>
+  </footer>

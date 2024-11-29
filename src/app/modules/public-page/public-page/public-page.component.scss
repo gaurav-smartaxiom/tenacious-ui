@@ -1,0 +1,54 @@
+@import '../../../../assets/styles/_global'; // Importing global variables
+
+.main-wrapper {
+    background: url('../../../../' + #{$public-page-bg}) no-repeat center center;
+    background-size: cover;
+    &::after {
+        bottom: 0;
+        @include content-border;
+        @include content-border-top-bottom;
+    }
+    &::before {
+       top: 0;
+       @include content-border;
+       @include content-border-top-bottom;
+    }
+
+    .inner-wrapper {
+        &::after {
+            left: 0;
+            @include content-border;
+            @include content-border-left-right;
+        }
+        &::before {
+           right: 0;
+           @include content-border;
+           @include content-border-left-right;
+        }
+
+        .auth-box {
+            width: 450px;
+            height: auto;
+            margin-left: 180px;
+            padding: 20px;
+            ::ng-deep {
+                .card {
+                    background-image: url('../../../../' + $brand-logo);
+                    background-size: 15rem;
+                    background-repeat: no-repeat;
+                    background-position-y: 2.5rem;
+                    background-position-x: center;
+                    padding-top: 9rem;
+                    .form-control:not(:placeholder-shown) ~ label {
+                        transform: scale(.85) translateY(-1rem) translateX(.15rem);
+                    }
+                    a {
+                        text-decoration: $none;
+                        color: $primary-text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+

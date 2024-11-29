@@ -1,1 +1,151 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+@import './assets/styles/global';
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Montserrat Regular"), local("Montserrat-Regular"),
+        url('https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+        U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "digital-7";
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/fonts/digital-7.ttf');
+}
+
+@font-face {
+    font-family: "Digital-7-Mono";
+    font-style: normal;
+    src: url('assets/fonts/Digital-7-Mono.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-Light.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background-color: #eef8f6;
+    font-size: $font-size-medium;
+    &.tenacious-wrapper {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        color: #444;
+        a,
+        p,
+        label,
+        span,
+        div,
+        button,
+        input,
+        textarea,
+        select {
+            font-size: $font-size-medium;
+        }
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .bg-gradient-primary {
+            color: #fff;
+            background: #1692e6 linear-gradient(180deg, #0097fd, #006ab1) repeat-x;
+            &:hover,
+            &:disabled {
+                background: #42b4ff linear-gradient(180deg, #4fb1f3, #089cff) repeat-x;
+                border-color: #80c5fd;
+            }
+        }
+        
+        .form-control {
+            font-size: $font-size-medium-important;
+        }
+        
+        [type=button]:disabled, [type=reset]:disabled, [type=submit]:disabled, button:disabled {
+            &:hover {
+                cursor: not-allowed;
+            }
+            cursor: not-allowed;
+        }
+        
+        .card {
+           &.border-bottom-primary {
+                border-bottom: 2px solid $primary-text-color;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,268 @@
+<!-- Main content -->
+<div class="row" id="alerts">
+	<div class="col-12">
+		<section class="content mt-4 mx-3">
+			<div class="col-12 mb-3">
+			</div>
+			<!-- Default box -->
+			<section class="content">
+				<!-- Default box -->
+				<div class="card no-border">
+					<div class="card-body p-0">
+						<div class="row">
+							<div class="col-md-12 bg-white p-3 tab-content cus-rounded-left cus-rounded-right">
+								<div class="tab-pane container-fluid active mb-3" id="a1">
+                  <h6 class="mb-4 font-weight-bold pageTitle text-uppercase">Master Data</h6>
+                  <!-- <div class="row py-1 mx-2">
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div
+                          class="form-group col-12 text-right p-0"
+                          id="add_new"
+                        >
+                          <button
+                            type="button"
+                            class="btn primary-btn one text-uppercase"
+                            title="ADD NEW MASTER DATA"
+                            (click)="addUpdateData()"
+                          >
+                            <div class="insider"></div>
+                            <i class="fas fa-plus pr-2"></i> ADD NEW MASTER DATA
+                          </button>
+                          <div class="searchDiv ml-3">
+                            <input
+                              pInputText
+                              type="text"
+                              id="globalSearch"
+                              (input)="
+                                dt1.filterGlobal(
+                                  $event.target.value,
+                                  'contains'
+                                )
+                              "
+                              placeholder="Search by Name or Type"
+                              class=""
+                              [ngClass]="{ open: isopenSearch }"
+                            />
+                            <button
+                              type="reset"
+                              title="Search"
+                              class="searchBtn btn primary-btn one text-uppercase"
+                              (click)="isopenSearch = !isopenSearch"
+                            >
+                              <i
+                                class="fas"
+                                [ngClass]="{
+                                  'fa-search-minus': isopenSearch,
+                                  'fa-search-plus': !isopenSearch
+                                }"
+                              ></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <p-table
+                    #dt1
+                    [value]="masterData"
+                    [paginator]="true"
+                    [globalFilterFields]="['IMEI_number', 'SIM_number', 'client_id', 'mfg_name', 'model_name', 'sw_ver', 'boot_rom_ver' ,'Firmware']"
+                    [rows]="10"
+                    [totalRecords]="masterData?.length"
+                    styleClass="p-datatable-gridlines"
+                    [loading]="isLoading"
+                    [resizableColumns]="true" columnResizeMode="expand"
+                  >
+                    <ng-template pTemplate="header">
+                      <tr class="thead">
+                        <th pResizableColumn pSortableColumn="IMEI_number">
+                          IMEI Number
+                        </th>
+                        <th pResizableColumn pSortableColumn="SIM_number">
+                          SIM Number 
+                        </th>
+                        <th pResizableColumn pSortableColumn="client_id">
+                          Client Id
+                        </th>
+                        <th pResizableColumn pSortableColumn="mfg_name">
+                          Manufacturer Name
+                        </th>
+                        <th pResizableColumn pSortableColumn="model_name">
+                          Model Name
+                        </th>
+                        <th pResizableColumn pSortableColumn="sw_ver">
+                          Software Version
+                        </th>
+                        <th pResizableColumn pSortableColumn="boot_rom_ver">
+                          Boot ROM Version
+                        </th>
+                        <th pResizableColumn pSortableColumn="Firmware">
+                          Firmware
+                        </th>
+                        <th pResizableColumn>Action</th>
+                      </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-master>
+                      <tr
+                        class="tbody"
+                      >
+                        <td class="text-truncate align-middle cursor-pointer">
+                          {{ master.IMEI_number }}
+                        </td>
+                        <td class="text-truncate align-middle cursor-pointer">
+                          {{ master.SIM_number }}
+                        </td>
+                        <td class="text-truncate align-middle cursor-pointer">
+                          {{ master.client_id }}
+                        </td>
+                        <td class="text-truncate align-middle cursor-pointer">
+                          {{ master.mfg_name }}
+                        </td>
+                        <td class="text-truncate align-middle cursor-pointer">
+                          {{ master.model_name }}
+                        </td>
+                        <td class="text-truncate align-middle cursor-pointer">
+                          {{ master.sw_ver }}
+                        </td>
+                        <td class="text-truncate align-middle cursor-pointer">
+                          {{ master.boot_rom_ver }}
+                        </td>
+                        <td
+                          class="align-middle"
+                        >
+                          {{ master.Firmware }}
+                        </td>
+                        <td
+                          class="align-middle"
+                        >
+                          <button
+                            class="btn editable-table-btn btn-sm icn-btn"
+                            title="Download calibration certificate"
+                            (click)="downloadCallibration(master.IMEI_number)"
+                            [disabled]="!master.file"
+                          >
+                            <i class="fas text-info fa-file-download"></i>
+                          </button>
+                          <button
+                            class="btn editable-table-btn btn-sm icn-btn"
+                            title="Update"
+                            (click)="addUpdateData(master)"
+                          >
+                            <i class="fas fa-pencil-alt text-info"></i>
+                          </button>
+                          <button
+                            class="btn editable-table-btn btn-sm icn-btn"
+                            title="Delete"
+                            (click)="opendeleteModal(master)"
+                          >
+                            <i class="fas fa-trash-alt text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </ng-template>
+                    <ng-template pTemplate="emptymessage" let-columns>
+                      <tr>
+                        <td class="text-center" colspan="9">
+                          No records found
+                        </td>
+                      </tr>
+                    </ng-template>
+                  </p-table>
+                  <p-confirmDialog [style]="{ width: '450px' }" [baseZIndex]="1052">
+                  </p-confirmDialog>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+         <!-- Add Modal: Master Data -->
+         <div class="editModal-container d-none" [class.open]="showPanel">
+          <div class="row bg-modal-header px-3 py-2 mx-0">
+            <h6 class="float-left">
+              {{selectedMaster ? 'Update' : 'Add New'}} Master Data
+            </h6>
+            <button
+              type="button"
+              class="float-right close text-white"
+              (click)="closePanel()"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="editModal-content px-3">
+            <!-- add new shipment -->
+            <form
+              *ngIf="masterForm"
+              [formGroup]="masterForm"
+              class="pl-2 mt-3"
+              (ngSubmit)="saveMaster()"
+            >
+              <div class="form-group row mb-2">
+                <div class="col-md-12 mt-2">
+                  <label class="mb-0 text-size9">IMEI Number</label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="IMEI Number"
+                    class="form-control p-2"
+                    formControlName="IMEI_number"
+                    [ngClass]="
+                      masterForm.controls['IMEI_number'].value
+                        ? ''
+                        : 'border-danger'
+                    "
+                  />
+                </div>
+
+                <div class="col-md-12 mt-2">
+                  <label class="mb-0 text-size9">SIM Number</label>
+                  <input
+                    id="desc"
+                    type="text"
+                    placeholder="SIM Number"
+                    class="form-control p-2"
+                    formControlName="SIM_number"
+                    [ngClass]="
+                      masterForm.controls['SIM_number'].value
+                        ? ''
+                        : 'border-danger'
+                    "
+                  />
+                </div>
+                <div class="col-md-12 mt-2">
+                  <label class="mb-0 text-size9">Client Id</label>
+                  <select
+                    id="client_id"
+                    class="form-control p-2"
+                    formControlName="client_id"
+                    [ngClass]="masterForm.controls['client_id'].value ? '' : 'border-danger'"
+                  >
+                  <option value="" hidden>Select Tenant</option>
+                  <option *ngFor="let tenant of tenantsList" [value]="tenant?.host">{{tenant?.host}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-start mt-4">
+                <button
+                  [disabled]="isLoading || masterForm.invalid"
+                  class="btn bg-gradient-success font-size13"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+			</section>
+
+		</section>
+
+	</div>
+</div>
+<!-- /Main content -->
+
+
+
+

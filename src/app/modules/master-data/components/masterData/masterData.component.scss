@@ -1,0 +1,88 @@
+:host ::ng-deep .shipment-steps.p-steps .p-steps-item .p-menuitem-link {
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  :host ::ng-deep .shipment-steps.p-steps .p-steps-item.p-highlight .p-steps-number {
+    background: #107cc9;
+    color: #fff;
+  }
+  
+  :host ::ng-deep .shipment-steps.p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
+    box-shadow: none;
+  }
+  
+  :host ::ng-deep .shipment-steps.p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  .editModal-container label {
+    color: #fff;
+  }
+  
+  .p-button-outlined {
+    background-color: #fff;
+  }
+  
+  .tracker-item {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+  }
+  
+  .tracker-item p {
+    margin-bottom: 5px;
+  }
+  
+  .tracker-item > div {
+    line-height: 12px;
+  }
+  
+  .tracker-item small {
+    color: #999;
+    font-size: 70%;
+  }
+  
+  :host ::ng-deep .tracker-list {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  
+  :host ::ng-deep .tracker-list .p-listbox-list .p-listbox-item {
+    color: #fff;
+    align-items: start;
+  }
+  
+  :host ::ng-deep .tracker-list .p-listbox-list .p-listbox-item.p-highlight {
+    background: transparent;
+  }
+  
+  .p-button-rounded.p-button-text {
+    padding: 0;
+    height: auto;
+    border-radius: unset;
+  }
+  
+  .blutag-item {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+  }
+  
+  .blutag-item > p {
+    margin-bottom: 0;
+  }
+  
+  .editModal-content {
+    height: calc(100% - 45px);
+    overflow: auto;
+    position: relative;
+  }
+  
+  ::ng-deep .pac-container {
+    z-index: 1060;
+  }
+  

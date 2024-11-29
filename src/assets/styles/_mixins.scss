@@ -1,0 +1,22 @@
+/* MIXIN STARTS */
+@import './variables';
+
+@mixin content-border {
+    background: $bg-color;
+    position: fixed;
+    content: "";
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+@mixin content-border-top-bottom    {
+    height: 5px;
+    width: 100%;
+}
+
+@mixin content-border-left-right    {
+    height: 100vh;
+    width: 5px;
+    top: $initial-zero;
+}
+/* MIXIN END */

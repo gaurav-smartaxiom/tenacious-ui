@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Work space
+tenacious-ui.code-workspace

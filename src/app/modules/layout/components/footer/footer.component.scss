@@ -1,0 +1,12 @@
+@import '../../../../../assets/styles/global';
+.footer {
+    background: #e6e4e2;
+    p {
+        font-size: $font-size-x-small;
+    }
+    a {
+        font-size: $font-size-x-small;
+        color: $theme-color;
+        text-decoration: $none;
+    }
+}

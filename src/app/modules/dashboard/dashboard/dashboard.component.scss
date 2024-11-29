@@ -1,0 +1,15 @@
+.accordion-item {
+    &:first-of-type,
+    &:last-of-type  {
+        border-radius: 0;
+    }
+}
+
+.accordion-button {
+    &:focus {
+        box-shadow: none;
+    }
+    &:not(.collapsed) {
+        background-color: #f2efef;
+    }
+}
